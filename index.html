@@ -1,0 +1,1014 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Srikanth Prathipati — Enterprise Architect</title>
+<meta name="description" content="Senior Principal Enterprise Architect with 15+ years building AI-native integration platforms and cloud transformation programs at global scale.">
+<meta property="og:title" content="Srikanth Prathipati — Enterprise Architect">
+<meta property="og:description" content="AI-Native Integration · Cloud Transformation · Agentic AI Systems in Production">
+<meta property="og:type" content="website">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:ital,wght@0,300;0,400;1,300&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #0a0f1e;
+    --navy-mid: #111827;
+    --navy-light: #1e2a3a;
+    --electric: #3b82f6;
+    --electric-bright: #60a5fa;
+    --cyan: #06b6d4;
+    --gold: #f59e0b;
+    --text: #e2e8f0;
+    --muted: #64748b;
+    --border: rgba(59,130,246,0.15);
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--navy);
+    color: var(--text);
+    font-family: 'DM Mono', monospace;
+    font-size: 14px;
+    line-height: 1.7;
+    overflow-x: hidden;
+  }
+
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 1000;
+    opacity: 0.4;
+  }
+
+  body::after {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(59,130,246,0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(59,130,246,0.03) 1px, transparent 1px);
+    background-size: 60px 60px;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  /* NAV */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    padding: 20px 48px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(to bottom, rgba(10,15,30,0.95), transparent);
+    backdrop-filter: blur(8px);
+  }
+
+  .nav-logo {
+    font-family: 'Syne', sans-serif;
+    font-weight: 800;
+    font-size: 16px;
+    color: var(--electric-bright);
+    letter-spacing: 0.05em;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 32px;
+    list-style: none;
+  }
+
+  .nav-links a {
+    color: var(--muted);
+    text-decoration: none;
+    font-size: 12px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    transition: color 0.2s;
+  }
+
+  .nav-links a:hover { color: var(--electric-bright); }
+
+  /* HERO */
+  .hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 120px 48px 80px;
+    z-index: 1;
+    overflow: hidden;
+  }
+
+  .hero-orb {
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(59,130,246,0.12) 0%, transparent 70%);
+    top: 50%;
+    right: -100px;
+    transform: translateY(-50%);
+    animation: pulse 6s ease-in-out infinite;
+    pointer-events: none;
+  }
+
+  .hero-orb-2 {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(6,182,212,0.08) 0%, transparent 70%);
+    bottom: 100px;
+    left: 200px;
+    animation: pulse 8s ease-in-out infinite reverse;
+    pointer-events: none;
+  }
+
+  @keyframes pulse {
+    0%, 100% { opacity: 1; transform: translateY(-50%) scale(1); }
+    50% { opacity: 0.7; transform: translateY(-50%) scale(1.1); }
+  }
+
+  .hero-content {
+    max-width: 800px;
+    position: relative;
+    z-index: 2;
+  }
+
+  .hero-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(59,130,246,0.1);
+    border: 1px solid var(--border);
+    border-radius: 2px;
+    padding: 6px 14px;
+    font-size: 11px;
+    color: var(--electric-bright);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin-bottom: 32px;
+    animation: fadeInUp 0.8s ease both;
+  }
+
+  .hero-tag::before {
+    content: '';
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--cyan);
+    animation: blink 1.5s ease-in-out infinite;
+  }
+
+  @keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.2; }
+  }
+
+  .location-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12px;
+    color: var(--muted);
+    margin-bottom: 24px;
+    animation: fadeInUp 0.8s 0.05s ease both;
+  }
+
+  .hero-name {
+    font-family: 'Syne', sans-serif;
+    font-weight: 800;
+    font-size: clamp(52px, 7vw, 88px);
+    line-height: 0.95;
+    color: #fff;
+    margin-bottom: 24px;
+    animation: fadeInUp 0.8s 0.1s ease both;
+  }
+
+  .hero-name .accent {
+    color: transparent;
+    -webkit-text-stroke: 1px rgba(59,130,246,0.5);
+  }
+
+  .hero-title {
+    font-family: 'Instrument Serif', serif;
+    font-style: italic;
+    font-size: clamp(18px, 2.5vw, 26px);
+    color: var(--muted);
+    margin-bottom: 32px;
+    animation: fadeInUp 0.8s 0.2s ease both;
+  }
+
+  .hero-desc {
+    font-size: 15px;
+    color: #94a3b8;
+    max-width: 580px;
+    line-height: 1.8;
+    margin-bottom: 48px;
+    animation: fadeInUp 0.8s 0.3s ease both;
+  }
+
+  .hero-ctas {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    animation: fadeInUp 0.8s 0.4s ease both;
+  }
+
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--electric);
+    color: #fff;
+    text-decoration: none;
+    padding: 14px 28px;
+    font-family: 'DM Mono', monospace;
+    font-size: 12px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s;
+    clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 0 100%);
+  }
+
+  .btn-primary:hover {
+    background: var(--electric-bright);
+    transform: translateY(-2px);
+  }
+
+  .btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: transparent;
+    color: var(--electric-bright);
+    text-decoration: none;
+    padding: 13px 28px;
+    font-family: 'DM Mono', monospace;
+    font-size: 12px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    border: 1px solid var(--border);
+    transition: all 0.2s;
+  }
+
+  .btn-secondary:hover {
+    border-color: var(--electric);
+    background: rgba(59,130,246,0.05);
+  }
+
+  /* STATS */
+  .stats-strip {
+    position: relative;
+    z-index: 1;
+    padding: 0 48px;
+    margin-top: -40px;
+    margin-bottom: 100px;
+  }
+
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    border: 1px solid var(--border);
+    background: rgba(17,24,39,0.8);
+    backdrop-filter: blur(12px);
+  }
+
+  .stat-item {
+    padding: 32px 28px;
+    border-right: 1px solid var(--border);
+    position: relative;
+    overflow: hidden;
+    transition: background 0.3s;
+  }
+
+  .stat-item:last-child { border-right: none; }
+  .stat-item:hover { background: rgba(59,130,246,0.04); }
+
+  .stat-item::before {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, var(--electric), var(--cyan));
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s;
+  }
+
+  .stat-item:hover::before { transform: scaleX(1); }
+
+  .stat-number {
+    font-family: 'Syne', sans-serif;
+    font-weight: 800;
+    font-size: 42px;
+    color: #fff;
+    line-height: 1;
+    margin-bottom: 8px;
+  }
+
+  .stat-number span { color: var(--electric-bright); }
+
+  .stat-label {
+    font-size: 11px;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+
+  /* SECTIONS */
+  section {
+    position: relative;
+    z-index: 1;
+    padding: 80px 48px;
+  }
+
+  .section-label {
+    font-size: 11px;
+    color: var(--electric-bright);
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .section-label::before {
+    content: '';
+    width: 24px;
+    height: 1px;
+    background: var(--electric);
+  }
+
+  .section-title {
+    font-family: 'Syne', sans-serif;
+    font-weight: 700;
+    font-size: clamp(28px, 4vw, 42px);
+    color: #fff;
+    margin-bottom: 56px;
+    line-height: 1.1;
+  }
+
+  /* TIMELINE */
+  .timeline {
+    position: relative;
+    padding-left: 32px;
+  }
+
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 8px;
+    bottom: 0;
+    width: 1px;
+    background: linear-gradient(to bottom, var(--electric), transparent);
+  }
+
+  .timeline-item {
+    position: relative;
+    margin-bottom: 56px;
+    opacity: 0;
+    transform: translateX(-20px);
+    transition: all 0.6s ease;
+  }
+
+  .timeline-item.visible { opacity: 1; transform: translateX(0); }
+
+  .timeline-dot {
+    position: absolute;
+    left: -38px;
+    top: 8px;
+    width: 12px;
+    height: 12px;
+    border: 2px solid var(--electric);
+    background: var(--navy);
+    border-radius: 50%;
+    transition: background 0.3s;
+  }
+
+  .timeline-item:hover .timeline-dot { background: var(--electric); }
+
+  .timeline-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 4px;
+  }
+
+  .timeline-role {
+    font-family: 'Syne', sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    color: #fff;
+  }
+
+  .timeline-period {
+    font-size: 11px;
+    color: var(--muted);
+    letter-spacing: 0.08em;
+    background: rgba(59,130,246,0.08);
+    padding: 4px 10px;
+    border: 1px solid var(--border);
+    white-space: nowrap;
+  }
+
+  .timeline-company {
+    font-size: 13px;
+    color: var(--electric-bright);
+    margin-bottom: 16px;
+  }
+
+  .timeline-bullets {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .timeline-bullets li {
+    font-size: 13px;
+    color: #94a3b8;
+    padding-left: 16px;
+    position: relative;
+    line-height: 1.6;
+  }
+
+  .timeline-bullets li::before {
+    content: '›';
+    position: absolute;
+    left: 0;
+    color: var(--electric);
+  }
+
+  /* PROJECTS */
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: 1px;
+    background: var(--border);
+  }
+
+  .project-card {
+    background: var(--navy-mid);
+    padding: 36px;
+    position: relative;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.5s ease;
+  }
+
+  .project-card.visible { opacity: 1; transform: translateY(0); }
+
+  .project-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, var(--electric), var(--cyan));
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s;
+  }
+
+  .project-card:hover::before { transform: scaleX(1); }
+
+  .project-card::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 50% 0%, rgba(59,130,246,0.06) 0%, transparent 60%);
+    opacity: 0;
+    transition: opacity 0.4s;
+    pointer-events: none;
+  }
+
+  .project-card:hover::after { opacity: 1; }
+
+  .project-tag {
+    font-size: 10px;
+    color: var(--cyan);
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .project-tag::before {
+    content: '';
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: var(--cyan);
+  }
+
+  .project-name {
+    font-family: 'Syne', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    color: #fff;
+    margin-bottom: 12px;
+    line-height: 1.2;
+  }
+
+  .project-desc {
+    font-size: 13px;
+    color: #94a3b8;
+    line-height: 1.7;
+    margin-bottom: 24px;
+  }
+
+  .project-meta {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+  }
+
+  .project-metric {
+    font-size: 11px;
+    color: var(--muted);
+  }
+
+  .project-metric strong {
+    font-family: 'Syne', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    color: var(--electric-bright);
+    display: block;
+    line-height: 1;
+    margin-bottom: 2px;
+  }
+
+  .tech-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  .tech-chip {
+    font-size: 10px;
+    color: var(--muted);
+    background: rgba(59,130,246,0.06);
+    border: 1px solid rgba(59,130,246,0.1);
+    padding: 3px 8px;
+    letter-spacing: 0.05em;
+  }
+
+  /* SKILLS */
+  .skills-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+  }
+
+  .skill-group {
+    background: rgba(17,24,39,0.6);
+    border: 1px solid var(--border);
+    padding: 28px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.5s ease;
+  }
+
+  .skill-group.visible { opacity: 1; transform: translateY(0); }
+
+  .skill-group-label {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--electric-bright);
+    margin-bottom: 16px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .skill-tag {
+    font-size: 12px;
+    color: #94a3b8;
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.06);
+    padding: 5px 10px;
+    transition: all 0.2s;
+    cursor: default;
+  }
+
+  .skill-tag:hover {
+    color: var(--electric-bright);
+    border-color: rgba(59,130,246,0.3);
+    background: rgba(59,130,246,0.05);
+  }
+
+  /* CONTACT */
+  .contact-section {
+    background: linear-gradient(135deg, rgba(17,24,39,0.9), rgba(30,42,58,0.9));
+    border: 1px solid var(--border);
+    padding: 64px 48px;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    margin: 0 48px 80px;
+  }
+
+  .contact-section::before {
+    content: '';
+    position: absolute;
+    top: -100px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(59,130,246,0.08) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .contact-title {
+    font-family: 'Syne', sans-serif;
+    font-weight: 800;
+    font-size: clamp(32px, 4vw, 48px);
+    color: #fff;
+    margin-bottom: 16px;
+  }
+
+  .contact-sub {
+    font-size: 14px;
+    color: var(--muted);
+    margin-bottom: 40px;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .contact-links {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+
+  /* FOOTER */
+  footer {
+    position: relative;
+    z-index: 1;
+    border-top: 1px solid var(--border);
+    padding: 24px 48px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .footer-text {
+    font-size: 11px;
+    color: var(--muted);
+    letter-spacing: 0.05em;
+  }
+
+  .divider {
+    border: none;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--border), transparent);
+    margin: 0 48px;
+    position: relative;
+    z-index: 1;
+  }
+
+  @keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  ::-webkit-scrollbar { width: 4px; }
+  ::-webkit-scrollbar-track { background: var(--navy); }
+  ::-webkit-scrollbar-thumb { background: var(--electric); border-radius: 2px; }
+
+  @media (max-width: 768px) {
+    nav { padding: 16px 24px; }
+    .nav-links { display: none; }
+    .hero { padding: 100px 24px 60px; }
+    .stats-strip { padding: 0 24px; }
+    .stats-grid { grid-template-columns: repeat(2, 1fr); }
+    section { padding: 60px 24px; }
+    .contact-section { margin: 0 24px 60px; padding: 48px 24px; }
+    footer { padding: 20px 24px; flex-direction: column; gap: 8px; text-align: center; }
+    .divider { margin: 0 24px; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-logo">SP // EA</div>
+  <ul class="nav-links">
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#projects">Work</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<section class="hero">
+  <div class="hero-orb"></div>
+  <div class="hero-orb-2"></div>
+  <div class="hero-content">
+    <div class="location-badge">
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+      Hyderabad, India
+    </div>
+    <h1 class="hero-name">Srikanth<br><span class="accent">Prathipati</span></h1>
+    <p class="hero-title">Enterprise Architect · AI-Native Integration · Cloud Transformation</p>
+    <p class="hero-desc">Most transformation programs produce roadmaps. I produce results. 15 years building the integration platforms and architecture standards that hold up under real-world pressure — from legacy monoliths to agentic AI systems in production.</p>
+    <div class="hero-ctas">
+      <a href="https://linkedin.com/in/srikanthprathipati" target="_blank" class="btn-primary">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+        Connect on LinkedIn
+      </a>
+    </div>
+  </div>
+</section>
+
+<div class="stats-strip">
+  <div class="stats-grid">
+    <div class="stat-item">
+      <div class="stat-number">15<span>+</span></div>
+      <div class="stat-label">Years in Enterprise Architecture</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-number">30<span>+</span></div>
+      <div class="stat-label">Greenfield Implementations</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-number">700<span>+</span></div>
+      <div class="stat-label">Active platform users</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-number">3</div>
+      <div class="stat-label">Agentic AI systems in production</div>
+    </div>
+  </div>
+</div>
+
+<section id="experience">
+  <div class="section-label">Career</div>
+  <h2 class="section-title">Where I've worked</h2>
+  <div class="timeline">
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-header">
+        <div class="timeline-role">Senior Principal Enterprise Architect</div>
+        <div class="timeline-period">Jan 2024 — Present</div>
+      </div>
+      <div class="timeline-company">Amway · Hyderabad, India · $8B+ global organization</div>
+      <ul class="timeline-bullets">
+        <li>Architected a cloud-native, event-driven integration platform replacing legacy monoliths across 50+ markets</li>
+        <li>Defined and governed EA standards across multi-cloud environments (AWS, GCP)</li>
+        <li>Led adoption of agentic AI and multi-agent systems (A2A, ADK) in core business workflows</li>
+        <li>Act as architectural decision authority across product, data, and infrastructure programs</li>
+      </ul>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-header">
+        <div class="timeline-role">Chief Architect → Enterprise Architect</div>
+        <div class="timeline-period">Jun 2021 — Jan 2024</div>
+      </div>
+      <div class="timeline-company">VKRAFT Software Services · Hyderabad, India</div>
+      <ul class="timeline-bullets">
+        <li>Defined architecture strategy and technical governance for enterprise integration and IoT programs</li>
+        <li>Led architecture review boards, established design standards across cloud transformation engagements</li>
+        <li>Principal architect across multiple concurrent client programs spanning Integration, API, IoT, and analytics</li>
+      </ul>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-header">
+        <div class="timeline-role">Integration Solution Architect</div>
+        <div class="timeline-period">Jun 2020 — Jun 2021</div>
+      </div>
+      <div class="timeline-company">Standard Chartered Bank · Bangalore, India</div>
+      <ul class="timeline-bullets">
+        <li>Architect of record on mission-critical integration programs in a globally regulated Tier-1 banking environment</li>
+        <li>Designed secure, high-availability architecture for Data-in-Motion solutions across multiple jurisdictions</li>
+      </ul>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-header">
+        <div class="timeline-role">Consultant → Senior Consultant → Technology Evangelist</div>
+        <div class="timeline-period">Jan 2011 — Jun 2020</div>
+      </div>
+      <div class="timeline-company">Software AG · Bengaluru, India · ~9 years</div>
+      <ul class="timeline-bullets">
+        <li>Technology Evangelist: drove enterprise adoption of Software AG's multi-cloud hybrid integration platform, partnered with Product & R&D</li>
+        <li>Senior Consultant: delivered complex EA and integration engagements across manufacturing, telecom, and financial services</li>
+        <li>Grew from implementation consultant to industry-recognized integration authority over nearly a decade</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<section id="projects">
+  <div class="section-label">Shipped Work</div>
+  <h2 class="section-title">Production systems<br>I've architected</h2>
+  <div class="projects-grid">
+    <div class="project-card">
+      <div class="project-tag">Agentic AI · 2025</div>
+      <div class="project-name">Mira Assist — SRE Operations Agent</div>
+      <div class="project-desc">Event-driven AI agent that listens to every Kafka audit and exception event, builds a persistent knowledge base in BigQuery, and routes AI-generated resolution steps to ServiceNow, Teams, Slack, or email based on failure classification.</div>
+      <div class="project-meta">
+        <div class="project-metric"><strong>40</strong>SRE & L1 engineers served</div>
+        <div class="project-metric"><strong>Live</strong>End of 2025</div>
+      </div>
+      <div class="tech-chips">
+        <span class="tech-chip">Google ADK</span>
+        <span class="tech-chip">Kafka</span>
+        <span class="tech-chip">Vertex AI</span>
+        <span class="tech-chip">Vertex RAG</span>
+        <span class="tech-chip">BigQuery</span>
+        <span class="tech-chip">MCP</span>
+        <span class="tech-chip">ServiceNow</span>
+      </div>
+    </div>
+    <div class="project-card">
+      <div class="project-tag">Self-Service Platform · 2024</div>
+      <div class="project-name">Luna Assist — Event Portal</div>
+      <div class="project-desc">Self-service event discovery and data contract platform powered by an AI agent. Any team can discover events from 200+ partner systems, browse schema docs, subscribe, and self-provision Kafka credentials through natural language.</div>
+      <div class="project-meta">
+        <div class="project-metric"><strong>700</strong>active users</div>
+        <div class="project-metric"><strong>200+</strong>partner systems</div>
+      </div>
+      <div class="tech-chips">
+        <span class="tech-chip">Google ADK</span>
+        <span class="tech-chip">Gemini</span>
+        <span class="tech-chip">MCP</span>
+        <span class="tech-chip">Kafka</span>
+        <span class="tech-chip">FastAPI</span>
+        <span class="tech-chip">Protobuf/AVRO</span>
+        <span class="tech-chip">Cloud Run</span>
+      </div>
+    </div>
+    <div class="project-card">
+      <div class="project-tag">Developer Tooling · 2024</div>
+      <div class="project-name">AI-Powered PR Review Agent</div>
+      <div class="project-desc">LangGraph-based CLI framework integrated into the DevOps process to automate code reviews. Enforces Amway-specific architectural standards and security policies across all PRs automatically on push, on-demand via CLI for tech leads.</div>
+      <div class="project-meta">
+        <div class="project-metric"><strong>150</strong>contributors covered</div>
+        <div class="project-metric"><strong>Live</strong>Since 2024</div>
+      </div>
+      <div class="tech-chips">
+        <span class="tech-chip">LangGraph</span>
+        <span class="tech-chip">LangChain</span>
+        <span class="tech-chip">OpenAI</span>
+        <span class="tech-chip">FastAPI</span>
+        <span class="tech-chip">Cloud Run</span>
+        <span class="tech-chip">GitHub API</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<section id="skills">
+  <div class="section-label">Technical Stack</div>
+  <h2 class="section-title">Skills & expertise</h2>
+  <div class="skills-container">
+    <div class="skill-group">
+      <div class="skill-group-label">Architecture & Strategy</div>
+      <div class="skill-tags">
+        <span class="skill-tag">Enterprise Architecture</span>
+        <span class="skill-tag">IT Strategy</span>
+        <span class="skill-tag">Architecture Governance</span>
+        <span class="skill-tag">Digital Transformation</span>
+        <span class="skill-tag">Business Process Design</span>
+        <span class="skill-tag">Industry 4.0</span>
+      </div>
+    </div>
+    <div class="skill-group">
+      <div class="skill-group-label">AI & Emerging Tech</div>
+      <div class="skill-tags">
+        <span class="skill-tag">Agentic AI</span>
+        <span class="skill-tag">Multi-Agent Systems</span>
+        <span class="skill-tag">Google ADK</span>
+        <span class="skill-tag">A2A Protocol</span>
+        <span class="skill-tag">MCP</span>
+        <span class="skill-tag">LLM</span>
+        <span class="skill-tag">RAG Engineering</span>
+        <span class="skill-tag">Prompt Engineering</span>
+        <span class="skill-tag">Generative AI</span>
+        <span class="skill-tag">LangChain</span>
+        <span class="skill-tag">LangGraph</span>
+        <span class="skill-tag">PyTorch</span>
+        <span class="skill-tag">MLflow</span>
+      </div>
+    </div>
+    <div class="skill-group">
+      <div class="skill-group-label">Cloud & Infrastructure</div>
+      <div class="skill-tags">
+        <span class="skill-tag">Google Cloud (GCP)</span>
+        <span class="skill-tag">AWS</span>
+        <span class="skill-tag">Azure</span>
+        <span class="skill-tag">Vertex AI</span>
+        <span class="skill-tag">Cloud Run</span>
+        <span class="skill-tag">Docker</span>
+        <span class="skill-tag">CI/CD</span>
+        <span class="skill-tag">Apache Airflow</span>
+        <span class="skill-tag">Apache Flink</span>
+      </div>
+    </div>
+    <div class="skill-group">
+      <div class="skill-group-label">Integration & API</div>
+      <div class="skill-tags">
+        <span class="skill-tag">Apache Kafka</span>
+        <span class="skill-tag">Apache Camel</span>
+        <span class="skill-tag">Apigee</span>
+        <span class="skill-tag">API Gateway</span>
+        <span class="skill-tag">webMethods</span>
+        <span class="skill-tag">WSO2</span>
+        <span class="skill-tag">Event-Driven Architecture</span>
+        <span class="skill-tag">Microservices</span>
+        <span class="skill-tag">REST</span>
+      </div>
+    </div>
+    <div class="skill-group">
+      <div class="skill-group-label">Development & Platforms</div>
+      <div class="skill-tags">
+        <span class="skill-tag">FastAPI</span>
+        <span class="skill-tag">Python</span>
+        <span class="skill-tag">Spring Boot</span>
+        <span class="skill-tag">Java</span>
+        <span class="skill-tag">BigQuery</span>
+        <span class="skill-tag">Flask</span>
+        <span class="skill-tag">LangChain</span>
+        <span class="skill-tag">LangGraph</span>
+        <span class="skill-tag">PyTorch</span>
+        <span class="skill-tag">MLflow</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="contact-section" id="contact">
+  <p class="section-label" style="justify-content:center;margin-bottom:16px;">Let's connect</p>
+  <h2 class="contact-title">Let's talk architecture</h2>
+  <p class="contact-sub">Reach out on LinkedIn to start a conversation.</p>
+  <div class="contact-links">
+    <a href="https://linkedin.com/in/srikanthprathipati" target="_blank" class="btn-primary">linkedin.com/in/srikanthprathipati</a>
+  </div>
+</div>
+
+<footer>
+  <span class="footer-text">Srikanth Prathipati · Hyderabad, India</span>
+  <span class="footer-text">Enterprise Architect · AI-Native Systems · 15+ Years</span>
+</footer>
+
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => {
+          entry.target.classList.add('visible');
+        }, entry.target.dataset.delay || 0);
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.timeline-item, .project-card, .skill-group').forEach((el, i) => {
+    el.dataset.delay = (i % 4) * 100;
+    observer.observe(el);
+  });
+
+  window.addEventListener('mousemove', (e) => {
+    const x = (e.clientX / window.innerWidth - 0.5) * 20;
+    const y = (e.clientY / window.innerHeight - 0.5) * 20;
+    const orb = document.querySelector('.hero-orb');
+    const orb2 = document.querySelector('.hero-orb-2');
+    if (orb) orb.style.transform = `translateY(-50%) translate(${x}px, ${y}px)`;
+    if (orb2) orb2.style.transform = `translate(${-x * 0.5}px, ${-y * 0.5}px)`;
+  });
+</script>
+</body>
+</html>
